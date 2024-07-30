@@ -59,6 +59,11 @@ st.markdown("""
     .stImage>img {
         border-radius: 10px;
     }
+     .gallery img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: 5px;
     </style>
     """, unsafe_allow_html=True)
 

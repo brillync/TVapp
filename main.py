@@ -4,8 +4,6 @@ from signup import signup_page
 from index import camera_scan_page, gallery_and_details_page, homepage
 from auth import get_db_connection
 
-
-
 # Fungsi utama aplikasi
 def main():
     # Periksa koneksi database dan tampilkan status
@@ -40,12 +38,14 @@ def main():
         if st.sidebar.button("Logout"):
             st.session_state["logged_in"] = False
             st.session_state["username"] = None  # Reset username setelah logout
-            st.experimental_rerun()  # Rerun aplikasi setelah logout
+            try:
+                st.experimental_rerun()  # Rerun aplikasi setelah logout
+            except Exception as e:
+                st.error(f"Error during rerun: {e}")
 
 # Menyematkan CSS dari file styles.css
 with open("styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
 
 # Jalankan fungsi utama
 if __name__ == "__main__":
