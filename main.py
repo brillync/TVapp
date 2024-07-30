@@ -38,7 +38,7 @@ def main():
         if st.sidebar.button("Logout"):
             st.session_state["logged_in"] = False
             st.session_state["username"] = None  # Reset username setelah logout
-            st.experimental_rerun()  # Rerun aplikasi setelah logout
+            st.experimental_set_query_params(reload=True)  # Trigger reload
 
 # Menyematkan CSS dari file styles.css
 with open("styles.css") as f:

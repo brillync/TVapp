@@ -24,6 +24,6 @@ def login_page():
             # Clear CAPTCHA setelah berhasil login
             del st.session_state["generated_captcha"]
             # Trigger rerun after successful login
-            st.experimental_rerun()
+            st.experimental_set_query_params(reload=True)
         else:
             st.error("Username atau password salah")
