@@ -15,4 +15,14 @@ header, .css-18e3th9, .css-1d391kg, .css-1d391kg p, .css-1d391kg h1, .css-1d391k
 
 .sidebar .sidebar-content a {
     color: #333;
+    .square-image {
+        width: 150px;  /* Anda dapat menyesuaikan ukuran ini sesuai kebutuhan */
+        height: 150px;  /* Anda dapat menyesuaikan ukuran ini sesuai kebutuhan */
+        object-fit: cover;
+        border: 1px solid #ddd;
+        margin: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
